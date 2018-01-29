@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | sunshinefc</title>
+  <title>sublime install | sunshinefc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开心就好">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunshinefc">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1、下载sublime text3安装包2、安装Package Control3、安装Emment（ emmet依赖pyv8）4、安装jade高亮……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sublime install">
+<meta property="og:url" content="http://yoursite.com/2018/01/29/sublime-install/index.html">
 <meta property="og:site_name" content="sunshinefc">
-<meta property="og:description" content="开心就好">
+<meta property="og:description" content="1、下载sublime text3安装包2、安装Package Control3、安装Emment（ emmet依赖pyv8）4、安装jade高亮……">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/sublime-install/emmet1.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/sublime-install/emmet2.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/sublime-install/emmet3.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/sublime-install/jade.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/sublime-install/sass.png">
+<meta property="og:updated_time" content="2018-01-29T10:08:08.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunshinefc">
-<meta name="twitter:description" content="开心就好">
+<meta name="twitter:title" content="sublime install">
+<meta name="twitter:description" content="1、下载sublime text3安装包2、安装Package Control3、安装Emment（ emmet依赖pyv8）4、安装jade高亮……">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/29/sublime-install/emmet1.png">
   
     <link rel="alternative" href="/atom.xml" title="sunshinefc" type="application/atom+xml">
   
@@ -153,157 +160,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-sublime-install" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      sublime install
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/29/sublime-install/" class="archive-article-date">
+
+        
+        <a href="/2018/01/29/sublime-install/" class="archive-article-date">
   	<time datetime="2018-01-29T10:06:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/sublime-install/">sublime install</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、下载sublime text3安装包<br>2、安装Package Control<br>3、安装Emment（ emmet依赖pyv8）<br>4、安装jade高亮<br>……<br><a id="more"></a><br>注：需翻墙</p>
+<h3 id="1、下载sublime-text3安装包"><a href="#1、下载sublime-text3安装包" class="headerlink" title="1、下载sublime text3安装包"></a>1、下载sublime text3安装包</h3><p><a href="http://www.sublimetext.com/" target="_blank" rel="noopener">sublime官网下载</a></p>
+<h3 id="2、安装Package-Control"><a href="#2、安装Package-Control" class="headerlink" title="2、安装Package Control"></a>2、安装Package Control</h3><p><a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">package control官网</a><br>快捷键 ctrl+~(调出控制台)<br>复制代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &apos;6f4c264a24d933ce70df5dedcf1dcaee&apos; + &apos;ebe013ee18cced0ef93d5f746d80ef60&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、安装Emment（-emmet依赖pyv8）"><a href="#3、安装Emment（-emmet依赖pyv8）" class="headerlink" title="3、安装Emment（ emmet依赖pyv8）"></a>3、安装Emment（ emmet依赖pyv8）</h3><p>打开package control(preferences-&gt;package control)<br><img src="/2018/01/29/sublime-install/emmet1.png" alt=""><br><img src="/2018/01/29/sublime-install/emmet2.png" alt=""></p>
+<h4 id="测试Emment是否安装成功"><a href="#测试Emment是否安装成功" class="headerlink" title="测试Emment是否安装成功"></a>测试Emment是否安装成功</h4><p><img src="/2018/01/29/sublime-install/emmet3.png" alt=""></p>
+<h3 id="4、安装jade高亮"><a href="#4、安装jade高亮" class="headerlink" title="4、安装jade高亮"></a>4、安装jade高亮</h3><p>打开package control<br><img src="/2018/01/29/sublime-install/jade.png" alt=""></p>
+<h3 id="5、安装sass高亮（sass依赖ruby）"><a href="#5、安装sass高亮（sass依赖ruby）" class="headerlink" title="5、安装sass高亮（sass依赖ruby）"></a>5、安装sass高亮（sass依赖ruby）</h3><pre><code>sass
+</code></pre><p><img src="/2018/01/29/sublime-install/sass.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">打开package control</span><br><span class="line">Package Control: Install Package</span><br><span class="line">输入ChineseLocalizations</span><br></pre></td></tr></table></figure></p>
+<h3 id="6、安装中文插件"><a href="#6、安装中文插件" class="headerlink" title="6、安装中文插件"></a>6、安装中文插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、按Ctrl+Shift+P打开命令行；</span><br><span class="line">2、输入Install Package，回车；</span><br><span class="line">3、然后继续输入ConvertToUTF8，回车</span><br></pre></td></tr></table></figure>
+<h3 id="7、中文乱码插件"><a href="#7、中文乱码插件" class="headerlink" title="7、中文乱码插件"></a>7、中文乱码插件</h3><h4 id="npm安装jade"><a href="#npm安装jade" class="headerlink" title="npm安装jade"></a>npm安装jade</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g jade</span><br><span class="line">jade --version</span><br><span class="line">jade -P -w index.jade</span><br></pre></td></tr></table></figure>
+<p><a href="https://s3.amazonaws.com/0ozb-6kaj-r0p8/zh/download.html" target="_blank" rel="noopener">赛风</a><br><a href="https://github.com/getlantern/forum#蓝灯lantern最新版本下载" target="_blank" rel="noopener">蓝灯</a><br><a href="https://www.fanqiangzhe.com/software/" target="_blank" rel="noopener">fire</a><br>Tunnello VPN</p>
+<h3 id="5、激活sublime"><a href="#5、激活sublime" class="headerlink" title="5、激活sublime"></a>5、激活sublime</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">TwitterInc</span><br><span class="line">200 User License</span><br><span class="line">EA7E-890007</span><br><span class="line">1D77F72E 390CDD93 4DCBA022 FAF60790</span><br><span class="line">61AA12C0 A37081C5 D0316412 4584D136</span><br><span class="line">94D7F7D4 95BC8C1C 527DA828 560BB037</span><br><span class="line">D1EDDD8C AE7B379F 50C9D69D B35179EF</span><br><span class="line">2FE898C4 8E4277A8 555CE714 E1FB0E43</span><br><span class="line">D5D52613 C3D12E98 BC49967F 7652EED2</span><br><span class="line">9D2D2E61 67610860 6D338B72 5CF95C69</span><br><span class="line">E36B85CC 84991F19 7575D828 470A92AB</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/29/sublime-install/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/29/tips/" class="archive-article-date">
-  	<time datetime="2018-01-29T09:55:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/29/tips/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tips</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/tips/">tips</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-hexo">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/29/Hexo server报错'utcOffset' of null/" class="archive-article-date">
-  	<time datetime="2018-01-29T03:55:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/Hexo server报错'utcOffset' of null/">Hexo server报错</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/18/tech/" class="archive-article-date">
-  	<time datetime="2018-01-18T09:49:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/18/tech/">安装sublime插件</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/18/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-18T09:40:49.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -326,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
