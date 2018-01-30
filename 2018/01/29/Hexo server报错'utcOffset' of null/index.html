@@ -9,13 +9,14 @@
   <title>Hexo server报错 | sunshinefc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Cannot read property ‘utcOffset’ of null">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo server报错">
 <meta property="og:url" content="http://yoursite.com/2018/01/29/Hexo server报错'utcOffset' of null/index.html">
 <meta property="og:site_name" content="sunshinefc">
 <meta property="og:description" content="Cannot read property ‘utcOffset’ of null">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-30T07:59:29.285Z">
+<meta property="og:updated_time" content="2018-01-30T08:22:09.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo server报错">
 <meta name="twitter:description" content="Cannot read property ‘utcOffset’ of null">
@@ -23,7 +24,7 @@
     <link rel="alternative" href="/atom.xml" title="sunshinefc" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -60,6 +61,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -117,6 +120,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -134,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -175,7 +182,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Cannot read property ‘utcOffset’ of null<br><a id="more"></a><br>Cannot read property ‘utcOffset’ of null<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">自己把_config.yml中的时区timezone改成了<span class="keyword">beijing</span></span><br><span class="line"><span class="keyword">解决办法就是把timezone改成Asia/Shanghai就好了。</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">只要在config.yml里面写上插件配置在命令行的hexo</span> <span class="string">server就失效。。。</span></span><br><span class="line"><span class="string">（暂无解决办法）</span></span><br><span class="line"><span class="comment"># Plugins</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">5</span> <span class="comment">##首页默认5篇文章标题，如果值为0不分页</span></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##归档页面默认20篇文章标题，如果值为0不分页</span></span><br><span class="line"><span class="attr">  yearly:</span> <span class="literal">true</span> <span class="comment">##生成年视图</span></span><br><span class="line"><span class="attr">  monthly:</span> <span class="literal">true</span> <span class="comment">##生成月视图</span></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##标签页面默认20篇文章，如果值为0不分页</span></span><br><span class="line"><span class="attr">category_generator:</span> </span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##分类页面默认20篇文章，如果值为0不分页</span></span><br></pre></td></tr></table></figure>
+<p>hexo 写文章时附带图片<br>找到根目录下的 _config.yml 文件，将 post_asset_folder 的值改为 true。<br>以后你使用 hexo new ‘’ 命令的时候，会在 source 目录新建一个同名的文件夹，然后把你的图片放进去就好了。</p>
+<p>只要在config.yml里面写上插件配置在命令行的hexo server就失效。。。<br>（暂无解决办法）</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Plugins</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">5</span> <span class="comment">##首页默认5篇文章标题，如果值为0不分页</span></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##归档页面默认20篇文章标题，如果值为0不分页</span></span><br><span class="line"><span class="attr">  yearly:</span> <span class="literal">true</span> <span class="comment">##生成年视图</span></span><br><span class="line"><span class="attr">  monthly:</span> <span class="literal">true</span> <span class="comment">##生成月视图</span></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##标签页面默认20篇文章，如果值为0不分页</span></span><br><span class="line"><span class="attr">category_generator:</span> </span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">20</span> <span class="comment">##分类页面默认20篇文章，如果值为0不分页</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -205,7 +214,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -447,6 +478,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">install</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">tip</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
