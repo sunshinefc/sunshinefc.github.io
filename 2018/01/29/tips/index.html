@@ -62,6 +62,8 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
+				<li><a href="/photos/">相册</a></li>
+	        
 				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
@@ -122,6 +124,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -142,11 +146,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
+					<li style="width: 25%"><a href="/photos/">相册</a></li>
+		        
+					<li style="width: 25%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -162,6 +168,8 @@
           </div>
           <div id="js-content" class="content-ll">
             <article id="post-tips" class="article article-type-post " itemscope itemprop="blogPost">
+
+
   <div class="article-inner">
     
       <header class="article-header">
@@ -197,8 +205,10 @@
 <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>npm i hexo-generator-json-content –save</p>
 <h3 id="config-yml-配置文件"><a href="#config-yml-配置文件" class="headerlink" title="_config.yml   配置文件"></a>_config.yml   配置文件</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jsonContent:</span></span><br><span class="line"><span class="attr">    meta:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    pages:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    posts:</span></span><br><span class="line"><span class="attr">      title:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      date:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      path:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">      text:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      raw:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      content:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      slug:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      updated:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      permalink:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      excerpt:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      categories:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">      tags:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
       
-
       
+        <span id="busuanzi_container_page_pv">
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
@@ -235,6 +245,9 @@
 		</ul>
 	</div>
 
+      <span id="busuanzi_container_page_pv">
+        |阅读量(<span id="busuanzi_value_page_pv"></span>)
+      </span>
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -369,7 +382,7 @@
 
   
 
-
+  
 <!-- 目录内容 -->
 
     <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
@@ -400,6 +413,7 @@
 
 
 
+
           </div>
         </div>
       </div>
@@ -414,7 +428,13 @@
       	</div>
     </div>
   </div>
+  <div>
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
