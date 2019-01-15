@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sunshinefc</title>
+  <title>登录页面ajax请求 | sunshinefc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开心就好">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunshinefc">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、登录验证提示信息二、验证码局部刷新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="登录页面ajax请求">
+<meta property="og:url" content="http://yoursite.com/2019/01/15/登录页面ajax请求/index.html">
 <meta property="og:site_name" content="sunshinefc">
-<meta property="og:description" content="开心就好">
+<meta property="og:description" content="一、登录验证提示信息二、验证码局部刷新">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-15T08:42:58.743Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunshinefc">
-<meta name="twitter:description" content="开心就好">
+<meta name="twitter:title" content="登录页面ajax请求">
+<meta name="twitter:description" content="一、登录验证提示信息二、验证码局部刷新">
   
     <link rel="alternative" href="/atom.xml" title="sunshinefc" type="application/atom+xml">
   
@@ -165,9 +166,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-登录页面ajax请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-登录页面ajax请求" class="article article-type-post " itemscope itemprop="blogPost">
 
 
   <div class="article-inner">
@@ -175,8 +174,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/15/登录页面ajax请求/">登录页面ajax请求</a>
+    <h1 class="article-title" itemprop="name">
+      登录页面ajax请求
     </h1>
   
 
@@ -195,11 +194,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、登录验证提示信息<br>二、验证码局部刷新<br></p>
-        
-          <a class="article-more-a" href="/2019/01/15/登录页面ajax请求/#more">more >></a>
-        
+        <p>一、登录验证提示信息<br>二、验证码局部刷新<br><a id="more"></a></p>
+<h2 id="login-js"><a href="#login-js" class="headerlink" title="login.js"></a>login.js</h2><h3 id="一、登录验证提示信息"><a href="#一、登录验证提示信息" class="headerlink" title="一、登录验证提示信息"></a>一、登录验证提示信息</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//提交登录信息</span></span><br><span class="line">sub.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">        <span class="keyword">var</span> username=$(<span class="string">'.login_box #Account'</span>).val()</span><br><span class="line">        <span class="keyword">var</span> password=$(<span class="string">'.login_box #Password'</span>).val()</span><br><span class="line">        <span class="keyword">var</span> captchaCode=$(<span class="string">'.login_box #Capcode'</span>).val()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> param = &#123;<span class="string">'username'</span>:username,<span class="string">'password'</span>:password,<span class="string">'captchaCode'</span>:captchaCode&#125;;</span><br><span class="line"><span class="comment">// console.log("Request param = "+JSON.stringify(param));</span></span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type:<span class="string">"post"</span>,</span><br><span class="line">            url:<span class="string">'/hjrz-webapp/app/admin/dologin'</span>,</span><br><span class="line">            dataType: <span class="string">'json'</span>,</span><br><span class="line">            contentType:<span class="string">"application/json"</span>,</span><br><span class="line">            cache : <span class="literal">false</span>,</span><br><span class="line">            data: <span class="built_in">JSON</span>.stringify(param),</span><br><span class="line">        &#125;).done(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">            <span class="comment">// console.log("++++" + JSON.stringify(result));</span></span><br><span class="line">            <span class="keyword">if</span>(result.code == <span class="string">'0'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(<span class="string">''</span>)</span><br><span class="line">                <span class="built_in">window</span>.location.href=<span class="string">'/hjrz-webapp/app/admin/index'</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(result.code == <span class="string">'0100'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(result.message)</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(<span class="string">''</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(result.code == <span class="string">'0101'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(result.message)</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(<span class="string">''</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(result.code == <span class="string">'0102'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(result.message)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(result.code == <span class="string">'0103'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(<span class="string">''</span>)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(result.message)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(result.code == <span class="string">'0104'</span>)&#123;</span><br><span class="line">                $(<span class="string">'.error5'</span>).html(result.message)</span><br><span class="line">                $(<span class="string">'.error6'</span>).html(result.message)</span><br><span class="line">                $(<span class="string">'.error7'</span>).html(<span class="string">''</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;).fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'fail'</span>);</span><br><span class="line"></span><br><span class="line">        &#125;);    </span><br><span class="line"></span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="二、验证码局部刷新"><a href="#二、验证码局部刷新" class="headerlink" title="二、验证码局部刷新"></a>二、验证码局部刷新</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> sub=$(<span class="string">'.sub input'</span>)</span><br><span class="line">    <span class="keyword">var</span> yzm=$(<span class="string">'.reg-box li a'</span>)</span><br><span class="line">    <span class="keyword">var</span> yimg=$(<span class="string">'.reg-box li img'</span>)</span><br><span class="line">    yzm.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> num=<span class="built_in">Math</span>.random()*<span class="number">10</span>;</span><br><span class="line">        yimg.attr(<span class="string">'src'</span>,<span class="string">'captchaCode?'</span>+num)</span><br><span class="line">    &#125;)</span><br><span class="line">    yimg.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> num=<span class="built_in">Math</span>.random()*<span class="number">10</span>;</span><br><span class="line">        yimg.attr(<span class="string">'src'</span>,<span class="string">'captchaCode?'</span>+num)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="解决火狐不发送ajax请求，刷新验证码没反应的问题"><a href="#解决火狐不发送ajax请求，刷新验证码没反应的问题" class="headerlink" title="解决火狐不发送ajax请求，刷新验证码没反应的问题"></a>解决火狐不发送ajax请求，刷新验证码没反应的问题</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">解决办法：加个随机数</span><br><span class="line">（图片路径一样   有时候有缓存  图片不会重新加载）</span><br><span class="line">原因：</span><br><span class="line"><span class="keyword">js改了线上有缓存的时候 </span>  引入<span class="keyword">js也可以加随机数 </span>清除缓存</span><br><span class="line">后台看路径只看问号前面的</span><br></pre></td></tr></table></figure>
+<h3 id="ajax请求图片"><a href="#ajax请求图片" class="headerlink" title="ajax请求图片"></a>ajax请求图片</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".reg-box li img"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="keyword">var</span> url = <span class="string">"captchaCode"</span>;</span><br><span class="line">         <span class="comment">// var data = &#123;type:1&#125;;</span></span><br><span class="line">         $.ajax(&#123;</span><br><span class="line">          type : <span class="string">"get"</span>,</span><br><span class="line">          <span class="keyword">async</span> : <span class="literal">false</span>, <span class="comment">//同步请求</span></span><br><span class="line">          url : url,</span><br><span class="line">          <span class="comment">// data : data,</span></span><br><span class="line">          timeout:<span class="number">1000</span>,</span><br><span class="line">          success:<span class="function"><span class="keyword">function</span>(<span class="params">dates</span>)</span>&#123;</span><br><span class="line">          <span class="comment">//alert(dates);</span></span><br><span class="line">          $(<span class="string">".reg-box li img"</span>)[<span class="number">0</span>].src=<span class="string">"captchaCode"</span>;<span class="comment">//要刷新的img</span></span><br><span class="line">          &#125;,</span><br><span class="line">          error: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="comment">// alert("失败，请稍后再试！");</span></span><br><span class="line">              &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">     &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="login-jsp页面"><a href="#login-jsp页面" class="headerlink" title="login.jsp页面"></a>login.jsp页面</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"login_box"</span>&gt;</span><br><span class="line">   &lt;<span class="selector-tag">ul</span> class=<span class="string">"reg-box"</span>&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">label</span> <span class="keyword">for</span>=<span class="string">""</span>&gt;账  号&lt;/label&gt;</span><br><span class="line">        &lt;<span class="selector-tag">input</span> id=<span class="string">"Account"</span> type=<span class="string">"text"</span> name=<span class="string">"username"</span> placeholder=<span class="string">"请输入您的账号"</span> class=<span class="string">"account"</span> maxlength=<span class="string">"11"</span>/&gt;</span><br><span class="line">        &lt;<span class="selector-tag">span</span> class=<span class="string">"error error5"</span>&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">label</span> <span class="keyword">for</span>=<span class="string">""</span>&gt;密  码&lt;/label&gt;</span><br><span class="line">        &lt;<span class="selector-tag">input</span> id=<span class="string">"Password"</span> type=<span class="string">"password"</span> name=<span class="string">"password"</span> class=<span class="string">"admin_pwd"</span> placeholder=<span class="string">"请输入密码"</span>/&gt;</span><br><span class="line">        &lt;<span class="selector-tag">span</span> class=<span class="string">"error error6"</span>&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;<span class="selector-tag">label</span> <span class="keyword">for</span>=<span class="string">""</span>&gt;验证码&lt;/label&gt;&lt;<span class="selector-tag">input</span> id=<span class="string">"Capcode"</span> type=<span class="string">"text"</span> name=<span class="string">"captchaCode"</span> class=<span class="string">"sradd photokey"</span> placeholder=<span class="string">"请输入验证码"</span> /&gt;</span><br><span class="line">        &lt;<span class="selector-tag">img</span> src=<span class="string">"captchaCode"</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=<span class="string">"tip"</span>&gt;</span><br><span class="line">            &lt;<span class="selector-tag">span</span> class=<span class="string">"error error7"</span>&gt;&lt;/span&gt;</span><br><span class="line">            &lt;<span class="selector-tag">a</span> &gt;看不清，换一张&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">   &lt;/ul&gt;</span><br><span class="line">   &lt;<span class="selector-tag">div</span> class=<span class="string">"sub"</span>&gt;</span><br><span class="line">       &lt;<span class="selector-tag">input</span> type=<span class="string">"button"</span> value=<span class="string">"立即登录"</span> /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
       
+      
+        
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -208,16 +232,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/15/登录页面ajax请求/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/15/登录页面ajax请求/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/15/hexo新建发布文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo新建发布文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -238,83 +321,14 @@
 
 
   
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
   
-    <article id="post-hexo新建发布文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/15/hexo新建发布文章/">hexo新建发布文章</a>
-    </h1>
   
 
+  
 
+  
 
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2019/01/15/hexo新建发布文章/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2019/01/15/hexo新建发布文章/" class="archive-article-date">
-  	<time datetime="2019-01-15T08:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、新建文章<br>2、编写makedown<br>3、发布<br></p>
-        
-          <a class="article-more-a" href="/2019/01/15/hexo新建发布文章/#more">more >></a>
-        
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/15/hexo新建发布文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
+  
 
   
 <!-- 目录内容 -->
@@ -322,491 +336,6 @@
 <!-- 目录内容结束 -->
 
 
-
-
-  
-    <article id="post-登陆ajax验证码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/15/登陆ajax验证码/">登陆ajax验证码</a>
-    </h1>
-  
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2019/01/15/登陆ajax验证码/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2019/01/15/登陆ajax验证码/" class="archive-article-date">
-  	<time datetime="2019-01-15T07:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2016年即将结束，从小白到现在，前端基本入门了，感觉以后的路还很长。想把自己半年学习前端的东西总结一下，希望给对刚入门的小伙伴有点帮助。</p>
-        
-          <a class="article-more-a" href="/2019/01/15/登陆ajax验证码/#more">more >></a>
-        
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/随笔//" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/15/登陆ajax验证码/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
-  
-    <article id="post-sublime-install" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/29/sublime-install/">sublime install</a>
-    </h1>
-  
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/01/29/sublime-install/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2018/01/29/sublime-install/" class="archive-article-date">
-  	<time datetime="2018-01-29T10:06:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、下载sublime text3安装包<br>2、安装Package Control<br>3、安装Emment（ emmet依赖pyv8）<br>4、安装jade高亮<br>……<br></p>
-        
-          <a class="article-more-a" href="/2018/01/29/sublime-install/#more">more >></a>
-        
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">install</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/29/sublime-install/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
-  
-    <article id="post-tips" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/29/tips/">tips</a>
-    </h1>
-  
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/01/29/tips/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2018/01/29/tips/" class="archive-article-date">
-  	<time datetime="2018-01-29T09:55:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、快速切图<br>2、hexo生成博文插入图片<br>3、目录</p>
-        
-          <a class="article-more-a" href="/2018/01/29/tips/#more">more >></a>
-        
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">tip</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/29/tips/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
-  
-    <article id="hexo-Hexo server报错&#39;utcOffset&#39; of null" class="article article-type-hexo  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/29/Hexo server报错'utcOffset' of null/">Hexo server报错</a>
-    </h1>
-  
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/01/29/Hexo server报错'utcOffset' of null/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2018/01/29/Hexo server报错'utcOffset' of null/" class="archive-article-date">
-  	<time datetime="2018-01-29T03:55:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Cannot read property ‘utcOffset’ of null<br></p>
-        
-          <a class="article-more-a" href="/2018/01/29/Hexo server报错'utcOffset' of null/#more">more >></a>
-        
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术//" class="article-tag-list-link color3">技术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/29/Hexo server报错'utcOffset' of null/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-
-  <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2018/01/18/hello-world/" class="pageViews">0</span>次
-  </a>
-
-        
-        <a href="/2018/01/18/hello-world/" class="archive-article-date">
-  	<time datetime="2018-01-18T09:40:49.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to my house</p>
-
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/18/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-
-
-
-
-  
-  
 
 
           </div>
@@ -830,8 +359,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
