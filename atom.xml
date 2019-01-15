@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-15T08:15:27.282Z</updated>
+  <updated>2019-01-15T08:32:35.800Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo新建发布文章</title>
+    <link href="http://yoursite.com/2019/01/15/hexo%E6%96%B0%E5%BB%BA%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2019/01/15/hexo新建发布文章/</id>
+    <published>2019-01-15T08:20:46.000Z</published>
+    <updated>2019-01-15T08:32:35.800Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、新建文章<br>2、编写makedown<br>3、发布<br><a id="more"></a></p><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"文章标题"</span></span><br><span class="line">hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure><h2 id="编写makedown"><a href="#编写makedown" class="headerlink" title="编写makedown"></a>编写makedown</h2><p>使用有道云编写makedown文档</p><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、新建文章&lt;br&gt;2、编写makedown&lt;br&gt;3、发布&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>登陆ajax验证码</title>
