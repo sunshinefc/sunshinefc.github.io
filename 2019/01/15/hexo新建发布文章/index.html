@@ -15,10 +15,12 @@
 <meta property="og:site_name" content="sunshinefc">
 <meta property="og:description" content="1、新建文章2、编写makedown3、发布">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-15T08:32:35.800Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/15/hexo新建发布文章/333.png">
+<meta property="og:updated_time" content="2019-01-15T09:11:12.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo新建发布文章">
 <meta name="twitter:description" content="1、新建文章2、编写makedown3、发布">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/15/hexo新建发布文章/333.png">
   
     <link rel="alternative" href="/atom.xml" title="sunshinefc" type="application/atom+xml">
   
@@ -198,6 +200,8 @@
 <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"文章标题"</span></span><br><span class="line">hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
 <h2 id="编写makedown"><a href="#编写makedown" class="headerlink" title="编写makedown"></a>编写makedown</h2><p>使用有道云编写makedown文档</p>
 <h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="hexo插入图片"><a href="#hexo插入图片" class="headerlink" title="hexo插入图片"></a>hexo插入图片</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1、最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</span><br><span class="line">![<span class="string">你想输入的替代文字</span>](<span class="link">xxxx/图片名.jpg</span>)</span><br><span class="line"></span><br><span class="line">注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</span><br><span class="line"></span><br><span class="line">2、 最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是<span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"2017/02/26/xxxx/图片名.jpg"</span>&gt;</span></span>，而不是<span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"xxxx/图片名.jpg&gt;</span></span></span>。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/01/15/hexo新建发布文章/333.png" alt="cmd截图"></p>
 
       
       
@@ -301,8 +305,8 @@
     </a>
   
   
-    <a href="/2019/01/15/登陆ajax验证码/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">登陆ajax验证码</div>
+    <a href="/2019/01/15/学习前端以来搜集到的网站/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学习前端以来搜集到的网站</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -498,11 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">tip</a>
+                <a href="javascript:void(0)" class="js-tag color1">study</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">study</a>
+                <a href="javascript:void(0)" class="js-tag color4">tip</a>
               </li>
             
             <div class="clearfix"></div>
