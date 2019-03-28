@@ -2,6 +2,10 @@
 title: sublime install
 date: 2018-01-29 18:06:58
 tags:
+  - install
+categories:
+- 技术  
+toc: true
 ---
 1、下载sublime text3安装包
 2、安装Package Control

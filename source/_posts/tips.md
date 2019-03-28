@@ -2,6 +2,10 @@
 title: tips
 date: 2018-01-29 17:55:55
 tags:
+  - tip 
+categories:
+- 技术  
+toc: true
 ---
 1、快速切图
 2、hexo生成博文插入图片
